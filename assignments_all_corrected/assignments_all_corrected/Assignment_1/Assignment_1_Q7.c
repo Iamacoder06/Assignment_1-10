@@ -1,17 +1,18 @@
 #include <stdio.h>
-#include <stdlib.h>
-
-/* Auto-generated: solution with only necessary headers included */
-
 
 int main() {
-    long a,b;
-    if(scanf("%ld %ld", &a,&b)!=2) return 0;
-    long signA = a<0?-1:1, signB = b<0?-1:1;
-    long aa = llabs(a), bb = llabs(b);
-    int la = aa%10, lb = bb%10;
-    aa = (aa/10)*10 + lb; bb = (bb/10)*10 + la;
-    long product = (aa*signA)*(bb*signB);
-    printf("After exchanging last digits: %ld and %ld\nProduct = %ld\n", aa*signA, bb*signB, product);
+ int a ,b , ld1 , ld2 , prod ;
+ printf("enter first number : ");
+ scanf("%d",&a);
+ printf("enter second number : ");
+ scanf("%d",&b);
+ ld1 = (a/10)*10 + (b%10);
+ ld2 = (b/10)*10 + (a%10);
+ prod = ld1 * ld2 ;
+ printf("the first number after exchanging the last digit is :%d\n",ld1);
+ printf("the second number after exchanging the last digit is :%d\n",ld2);
+ printf("the product of the two numbers after exchanging the last digits  is : %d",prod);
+ 
+
     return 0;
 }
